@@ -1,0 +1,49 @@
+#include <SoftwareSerial.h>
+
+// Create a software serial port for communication with the Voice Recognition Module
+SoftwareSerial voiceRecognitionSerial(2, 3);  // RX, TX
+
+// Pin for LED control
+const int ledPin = 13;
+
+void setup() {
+  // Start communication with the Serial Monitor
+  Serial.begin(9600);
+  
+  // Start the voice recognition serial communication
+  voiceRecognitionSerial.begin(9600);
+
+  // Set LED pin as output
+  pinMode(ledPin, OUTPUT);
+
+  // Wait for the module to initialize
+  delay(2000);
+  Serial.println("Voice Recognition System Initialized.");
+}
+
+void loop() {
+  // Check if there's data from the Voice Recognition Module
+  if (voiceRecognitionSerial.available()) {
+    int command = voiceRecognitionSerial.read();  // Read the command from the module
+
+    // Print the command for debugging purposes
+    Serial.print("Command Received: ");
+    Serial.println(command);
+
+    // Perform action based on the received command
+    if (command == 0) {
+      // Command 0: Turn ON the LED
+      digitalWrite(ledPin, HIGH);
+      Serial.println("LED is ON");
+    } 
+    else if (command == 1) {
+      // Command 1: Turn OFF the LED
+      digitalWrite(ledPin, LOW);
+      Serial.println("LED is OFF");
+    } 
+    else {
+      // Unknown command
+      Serial.println("Unknown command received");
+    }
+  }
+}
