@@ -10,7 +10,7 @@
 
 
 ### Project: SPEECH RECOGNITION SYSTEM
-![image alt]()
+![image alt](https://github.com/pavankum123/codetech-Atask4/blob/def63096378b3dc7d9b221365bd6d89fe9a7afc0/61291857f2c2b959d46fa7f2_speech%20recognition.png)
 
 ### Objective
 The objective of a Speech Recognition System is to enable computers or machines to accurately transcribe and understand human speech. The system aims to facilitate natural interaction between humans and devices through voice, making it possible to control systems, dictate text, and communicate without the need for physical input. It strives to process spoken words, convert them into text, and interpret commands or questions efficiently and effectively. A key goal is to achieve high accuracy in recognizing speech across various accents, languages, and in noisy environments, all while ensuring real-time processing and maintaining privacy and security for users. This technology enhances accessibility, provides hands-free convenience, and plays a critical role in improving overall user experience in applications ranging from virtual assistants to transcription services.
